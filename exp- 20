@@ -1,0 +1,12 @@
+from sklearn.linear_model import LinearRegression
+
+months = [[1], [2], [3], [4], [5]]
+sales = [100, 150, 200, 250, 300]
+
+model = LinearRegression()
+model.fit(months, sales)
+
+future_sales = model.predict([[6]])
+
+print("Predicted Future Sales:")
+print(future_sales[0])
