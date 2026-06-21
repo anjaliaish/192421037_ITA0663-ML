@@ -1,0 +1,13 @@
+from sklearn.linear_model import LinearRegression
+
+# House size and price
+X = [[1000], [1200], [1500], [1800], [2000]]
+y = [20, 25, 30, 35, 40]
+
+model = LinearRegression()
+model.fit(X, y)
+
+price = model.predict([[1600]])
+
+print("Predicted House Price:")
+print(price[0], "Lakhs")
