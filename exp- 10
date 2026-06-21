@@ -1,0 +1,12 @@
+from sklearn.mixture import GaussianMixture
+import numpy as np
+
+X = np.array([[1],[2],[3],[10],[11],[12]])
+
+gmm = GaussianMixture(n_components=2)
+gmm.fit(X)
+
+labels = gmm.predict(X)
+
+print("Cluster Labels:")
+print(labels)
