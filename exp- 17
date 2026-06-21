@@ -1,0 +1,12 @@
+from sklearn.linear_model import LinearRegression
+
+X = [[2], [4], [6], [8], [10]]
+y = [10000, 15000, 20000, 25000, 30000]
+
+model = LinearRegression()
+model.fit(X, y)
+
+price = model.predict([[7]])
+
+print("Predicted Mobile Price:")
+print(price[0])
