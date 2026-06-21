@@ -1,0 +1,13 @@
+from sklearn.linear_model import LinearRegression
+
+# Car age and price
+X = [[1], [2], [3], [4], [5]]
+y = [500000, 450000, 400000, 350000, 300000]
+
+model = LinearRegression()
+model.fit(X, y)
+
+price = model.predict([[6]])
+
+print("Predicted Car Price:")
+print(price[0])
