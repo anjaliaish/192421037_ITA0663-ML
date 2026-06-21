@@ -1,0 +1,18 @@
+from sklearn.naive_bayes import GaussianNB
+
+X = [
+    [50000, 1],
+    [60000, 1],
+    [20000, 0],
+    [80000, 1]
+]
+
+y = ["Approved", "Approved", "Rejected", "Approved"]
+
+model = GaussianNB()
+model.fit(X, y)
+
+result = model.predict([[30000, 0]])
+
+print("Loan Status:")
+print(result[0])
